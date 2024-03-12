@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <h1>Carte</h1>
+        <div class="row row-cols-3">
+
+            <div *ngFor="let box of boxes" class="card col p-2 m-2" style="width: 30%;">
+                <img [src]="'http://localhost:8080/api/image/' + box.image" class="card-img-top" alt="">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <td>{{ box.nom }}</td>
+                        </li>
+                        <li class="list-group-item">
+                            <td>Pièce : {{ box.pieces }} </td>
+                        </li>
+                        <li class="list-group-item">
+                            <td>Prix : {{ box.prix }}$</td>
+                        </li>
+                        <li class="list-group-item">
+                            <td>Aliments : {{ box.aliments }}</td>
+                        </li>
+                        <li class="list-group-item">
+                            <td>Saveurs : {{ box.saveurs }}</td>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="margin: 10px;">+</a><a href="#" class="btn btn-primary" style="margin: 10px;">-</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
