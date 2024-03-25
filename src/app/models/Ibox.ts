@@ -4,6 +4,6 @@ export interface Ibox {
     pieces: string,
     prix: string,
     image: string,
-    aliments:[],
-    saveurs:string[],
-    }   
+    aliments: Array<any>,
+    saveurs: string[],
+}   

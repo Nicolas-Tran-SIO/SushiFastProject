@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+
+    background-image: url(../../../assets/backgroundsushi.png);
+}
+
+.container {
+    margin-top: 50px;
+
+    display: inline-block;
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    height: 600px;
+
+}
+
+.image {
+    position: absolute;
+
+    bottom: 0;
+
+    right: 0;
+
+    margin-top: 300px;
+
+    margin-right: 50px;
+
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    margin-top : 50px;
+
+    font-size: 40px;
+}

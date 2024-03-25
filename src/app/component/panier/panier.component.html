@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Panier</h1>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Panier</h1>
+        <div *ngFor="let ligne of ligne">
+            <div>{{ ligne.box.nom }}</div>          
+            <div>x {{ligne.quantite }}</div>
+            <div>Prix : {{ ligne.box.prix }}€</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

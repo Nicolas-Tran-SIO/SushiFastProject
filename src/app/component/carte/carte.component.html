@@ -2,19 +2,42 @@
     <div class="row">
         <h1>Carte</h1>
         <div class="row row-cols-3">
-
-            <div *ngFor="let box of boxes" class="card col p-2 m-2" style="width: 30%;">
+            <div  
+                *ngFor="let box of boxes" class="card col p-2 m-2" style="width: 30%;">
+                <a data-bs-toggle="modal" data-bs-target="#example" (click)="onDetails(box)"  href="#">
                 <img [src]="'http://localhost:8080/api/image/' + box.image" class="card-img-top" alt="">
+                 </a>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item" >
-                            <td>{{ box.nom }}  {{ box.prix }}$</td>
+                        <li class="list-group-item">
+                            <td>{{ box.nom }} {{ box.prix | number:'1.2-2'}}€</td>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-primary" style="margin: 10px;">+</a><a href="#" class="btn btn-primary" style="margin: 10px;">-</a>
+                    <a href="#" class="btn btn-primary" (click)="ajouter(box)"
+                        style="margin: 10px;">+</a>
                 </div>
+           
             </div>
 
+            <div class="modal fade " id="example" tabindex="-1" aria-activedescendant="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div classe="modal-header">
+                            <h1 class="modal-title fs-5 " id="exampleModalLabel">Détails de {{detailBox?.nom}}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img [src]="'http://localhost:8080/api/image/'+ detailBox?.image" class="card-img-top"
+                                alt="">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Aliments</h1>
+                            <p *ngFor="let aliment of detailBox?.aliments">{{aliment?.nom }}</p>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Saveur</h1>
+                            <p>{{detailBox?.saveurs}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

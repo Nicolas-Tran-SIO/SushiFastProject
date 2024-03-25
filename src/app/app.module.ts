@@ -10,6 +10,8 @@ import { CarteComponent } from './component/carte/carte.component';
 import { BoxFormComponent } from './component/box-form/box-form.component';
 import { BoxListComponent } from './component/box-list/box-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RgpdComponent } from './component/rgpd/rgpd.component';
+import { CommandeComponent } from './component/panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     CarteComponent,
     BoxFormComponent,
-    BoxListComponent
+    BoxListComponent,
+    RgpdComponent,
+    CommandeComponent
   ],
   imports: [
     BrowserModule,
