@@ -11,12 +11,19 @@
     <div class="container">
         <h1>Panier</h1>
         <div *ngFor="let ligne of ligne">
-            <div>{{ ligne.box.nom }}</div>          
-            <div>x {{ligne.quantite }}</div>
-            <div>Prix : {{ ligne.box.prix }}€</div>
+            <div>{{ ligne.box.nom }}</div>
+            <div>
+                <button class="btn btn-primary" (click)="enlever(ligne.box,1)" style="margin: 10px;">-</button>
+                x {{ligne.quantite }}
+                <button class="btn btn-primary" (click)="ajouter(ligne.box,1)" style="margin: 10px;">+</button>
+            </div>
+            <div>Prix : {{ prixLigne(ligne)}}€</div>
         </div>
+        <h1>Total : </h1>
+        <div> {{ prixTotla() }}€</div>
+        <a class="btn btn-primary" href="#" role="button"> Valider</a>
     </div>
-
 </body>
+        
 
 </html>
