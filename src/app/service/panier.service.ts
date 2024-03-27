@@ -18,9 +18,16 @@ export class PanierService {
 
   addLigne(uneBox:Box, qte:number) {
     let nouvelleLigne=new Ligne(qte,uneBox)
-    //TODO
+    let ligneExiste = false;
+    for (let boxe of this.ligne){
+      if (boxe.box.id == uneBox.id){
+        boxe.quantite+=qte
+        ligneExiste = true
+      }
+    }
+    if (ligneExiste == false){
     this.ligne.push(nouvelleLigne);
-
+  }
     localStorage.setItem("panier",JSON.stringify(this.ligne))
   }
 
