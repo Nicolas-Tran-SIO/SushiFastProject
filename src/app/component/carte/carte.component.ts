@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SushiBoxService } from '../../service/sushi-box.service';
 import { Box } from '../../models/Box';
 import { PanierService } from '../../service/panier.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-carte',
@@ -12,10 +13,13 @@ import { PanierService } from '../../service/panier.service';
 export class CarteComponent {
   boxes: Array<Box>
   detailBox: Box | null
+  environement:any 
+
   constructor(private sushiBoxService: SushiBoxService, private panierService:PanierService) {
     this.detailBox = null
     this.getBoxes();
     this.boxes = []
+    this.environement=environment
   }
 
   getBoxes(): void {

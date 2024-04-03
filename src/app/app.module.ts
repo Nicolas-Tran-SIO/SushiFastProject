@@ -12,6 +12,7 @@ import { BoxListComponent } from './component/box-list/box-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RgpdComponent } from './component/rgpd/rgpd.component';
 import { CommandeComponent } from './component/panier/panier.component';
+import { ValidationComponent } from './component/validation/validation.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommandeComponent } from './component/panier/panier.component';
     BoxFormComponent,
     BoxListComponent,
     RgpdComponent,
-    CommandeComponent
+    CommandeComponent,
+    ValidationComponent
   ],
   imports: [
     BrowserModule,
