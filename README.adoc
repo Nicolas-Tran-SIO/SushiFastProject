@@ -1,4 +1,4 @@
-= Projet Virtual landscape Master
+= Projet SushiFast
 :toc-title: Sommaire
 :toc: top
 
